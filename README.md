@@ -1,0 +1,1 @@
+This resume was created using HTML and CSS. Thanks for taking a look!
