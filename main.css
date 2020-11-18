@@ -47,23 +47,24 @@ table {
 	border-spacing: 0;
 }
 
-/* Grid */
+/* Body */
 body {
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	box-sizing: border-box;
+	line-height: 1.15;
 }
 
+/* Grid */
 .container {
 	display: grid;
 	height: 100vh;
 	grid-template-columns: 1fr 2fr;
-	grid-template-rows: repeat(6, 1fr);
+	grid-template-rows: auto auto auto 1fr 1fr;
 	grid-template-areas:
 		"photo			work-exp"
 		"intro			work-exp"
 		"contact		work-exp"
-		"strengths		work-exp"
 		"tech-skills	education"
 		"languages		education";
 }
@@ -78,10 +79,6 @@ body {
 
 .contact {
 	grid-area: contact;
-}
-
-.strengths {
-	grid-area: strengths;
 }
 
 .tech-skills {
@@ -106,12 +103,55 @@ body {
 
 .col-1,
 .col-2 {
-	padding: 15px 5px;
+	padding: 15px;
+}
+
+/* Typography */
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 20px;
+	border-bottom: 1px solid darkgray;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+li {
+	list-style-type: circle;
+	list-style-position: inside;
 }
 
 /* Profile photo */
+.photo {
+	text-align: center;
+}
+
 .profile-photo {
 	height: 300px;
 	border-radius: 50%;
 }
 
+/* Intro */
+.intro {
+	text-align: center;
+}
+
+/* Contact */
+.fab,
+.fas {
+	display: block;
+	padding: 10px;
+}
