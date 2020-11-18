@@ -52,22 +52,29 @@ body {
 	max-width: 1400px;
 	margin: 0 auto;
 	box-sizing: border-box;
-	line-height: 1.25;
+	line-height: 1.5;
 	font-family: 'Lato', sans-serif;
+	color: #2F4F4F;
+	font-weight: 500;
+	background-image: linear-gradient(to bottom right, #fff8e7, #faf0e6);
 }
 
 /* Grid */
 .container {
 	display: grid;
-	height: 100vh;
 	grid-template-columns: 1fr 2fr;
-	grid-template-rows: auto auto auto 1fr 1fr;
+	grid-template-rows: 60px repeat(4, auto) 60px;
 	grid-template-areas:
-		"photo			work-exp"
+		"header			header"
 		"intro			work-exp"
-		"contact		work-exp"
-		"tech-skills	education"
-		"languages		education";
+		"tech-skills		work-exp"
+		"languages	education"
+		"contact		education"
+		"footer			footer";
+}
+
+.header {
+	grid-area: header;
 }
 
 .photo {
@@ -98,13 +105,17 @@ body {
 	grid-area: education;
 }
 
+.footer {
+	grid-area: footer;
+}
+
 .col-1 {
 	background-color: #94dee7;
 }
 
 .col-1,
 .col-2 {
-	padding: 30px;
+	padding: 20px 30px;
 }
 
 /* Typography */
@@ -121,10 +132,13 @@ h2 {
 	text-align: center;
 	text-transform: uppercase;
 	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;;
 }
 
 h3 {
 	font-size: 20px;
+	font-weight: 800;
 }
 
 h4 {
@@ -136,19 +150,16 @@ h5 {
 	font-size: 16px;
 }
 
+ul {
+	text-indent: -15px;
+	margin-left: 15px;
+}
+
 li {
 	list-style-type: circle;
 	list-style-position: inside;
-}
-
-/* Profile photo */
-.photo {
-	text-align: center;
-}
-
-.profile-photo {
-	height: 300px;
-	border-radius: 50%;
+	padding: 0 20px;
+	font-size: 16px;
 }
 
 /* Intro */
@@ -156,9 +167,39 @@ li {
 	text-align: center;
 }
 
+.profile-photo {
+	height: 300px;
+	border-radius: 50%;
+	border: 5px solid #faf0e6;
+}
+
 /* Contact */
+.contact-links {
+	display: flex;
+	justify-content: center;
+}
+
 .fab,
 .fas {
-	display: block;
 	padding: 10px;
+}
+
+/* Professional Experience */
+.work-exp ul {
+	padding-bottom: 20px;
+}
+
+/* Education */
+.education h4 {
+	padding-bottom: 20px;
+}
+
+.work-exp ul:last-child {
+	padding-bottom: 0;
+}
+
+/* Footer */
+.footer {
+	font-size: 14px;
+	align-self: end;
 }
