@@ -52,7 +52,7 @@ body {
 	max-width: 1400px;
 	margin: 0 auto;
 	box-sizing: border-box;
-	line-height: 1.15;
+	line-height: 1.25;
 }
 
 /* Grid */
@@ -113,20 +113,21 @@ h1 {
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 25px;
 	border-bottom: 1px solid darkgray;
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 h4 {
-	font-size: 16px;
+	font-size: 18px;
+	font-style: italic;
 }
 
 h5 {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 li {
