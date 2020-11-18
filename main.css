@@ -53,6 +53,7 @@ body {
 	margin: 0 auto;
 	box-sizing: border-box;
 	line-height: 1.25;
+	font-family: 'Lato', sans-serif;
 }
 
 /* Grid */
@@ -103,18 +104,23 @@ body {
 
 .col-1,
 .col-2 {
-	padding: 15px;
+	padding: 30px;
 }
 
 /* Typography */
 h1 {
-	font-family: 'Dancing Script', cursive;
 	font-size: 40px;
+	font-family: 'Lora', serif;
 }
 
 h2 {
 	font-size: 25px;
 	border-bottom: 1px solid darkgray;
+	background-color: #2F4F4F;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px;
 }
 
 h3 {
