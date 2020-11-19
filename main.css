@@ -67,10 +67,40 @@ body {
 	grid-template-areas:
 		"header			header"
 		"intro			work-exp"
-		"tech-skills		work-exp"
-		"languages	education"
+		"tech-skills	work-exp"
+		"languages		education"
 		"contact		education"
 		"footer			footer";
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 60px repeat(6, auto) 60px;
+		grid-template-areas:
+			"header"
+			"intro"
+			"tech-skills"
+			"work-exp"
+			"education"
+			"languages"
+			"contact"
+			"footer";
+	}
+	
+	.header,
+	.tech-skills,
+	.work-exp,
+	.education,
+	.languages,
+	.footer {
+		background-image: linear-gradient(to bottom right, #fff8e7, #faf0e6);
+	}
+
+	.intro,
+	.contact {
+		background-color: #94dee7;
+	}
 }
 
 .header {
@@ -177,12 +207,14 @@ li {
 .contact-links {
 	display: flex;
 	justify-content: center;
+	font-size: 24px;
 }
 
 .fab,
 .fas {
-	padding: 10px;
+	padding: 5px 20px;
 }
+
 
 /* Professional Experience */
 .work-exp ul {
